@@ -1,0 +1,17 @@
+
+<mat-card class="mt-5">
+    <mat-card-title>Order Details</mat-card-title>
+    <mat-card-content>
+        <div *ngIf="productInfo && (productInfo | keyvalue)?.length; else noRecord">
+      <p class="font-weight-bold">Item Name : <span class="text-pink">{{productInfo.product}}</span></p>
+      <p class="font-weight-bold">Price : <span class="text-pink">{{productInfo.price | currency:'USD':'symbol':'3.1-1'}}</span></p>
+      <p class="font-weight-bold">Total Price : <span class="text-pink">{{productInfo.price * productInfo.order_quantity | currency:'USD':'symbol':'3.1-1'}}</span></p>
+      <p class="font-weight-bold">Customer Name : <span class="text-pink">{{productInfo.customer}}</span></p>
+      <p class="font-weight-bold">Delievry Address : <span class="text-pink">{{productInfo.delivery_address}}</span></p>
+    </div>
+    <ng-template #noRecord>
+        <p class="text-center">No Records Found!</p>
+    </ng-template>
+
+    </mat-card-content>
+  </mat-card>
