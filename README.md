@@ -1,6 +1,7 @@
 # BasicOrderApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+Run npm install and then serve on your local development server http://localhost:4200/
 
 ## Development server
 
